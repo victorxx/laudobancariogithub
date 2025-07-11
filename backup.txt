@@ -219,7 +219,7 @@
       {
     "titulo": "Laudos periciais digitais ganham reconhecimento legal",
     "texto": "Tribunais começam a aceitar laudos periciais em formato digital, acelerando processos judiciais."
-  },
+      },
                         {
                             "titulo": "Especialistas destacam importância da perícia técnica em laudos",
                             "texto": "Profissionais reforçam que laudos periciais bem fundamentados são essenciais para decisões judiciais precisas."
