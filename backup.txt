@@ -21,37 +21,6 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   
-  <!-- Open Graph meta tags -->
-  <meta property="og:title" content="Laudo Pericial Bancário - Notícias e Análises" />
-  <meta property="og:description" content="Informações, análises e notícias atualizadas sobre perícia bancária." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://seudominio.com.br" />
-  <meta property="og:image" content="https://seudominio.com.br/imagem-compartilhamento.jpg" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:site_name" content="Laudo Pericial Bancário" />
-
-  <!-- Twitter meta tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Laudo Pericial Bancário - Notícias e Análises" />
-  <meta name="twitter:description" content="Informações, análises e notícias atualizadas sobre perícia bancária." />
-  <meta name="twitter:image" content="https://seudominio.com.br/imagem-compartilhamento.jpg" />
-  <meta name="twitter:site" content="@seuTwitter" />
-  <meta name="twitter:creator" content="@seuTwitter" />
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Laudo Pericial Bancário",
-    "url": "https://seudominio.com.br",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://seudominio.com.br/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
   <style>
     * {
       margin: 0;
@@ -61,8 +30,8 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #121212; /* Cor de fundo escura */
-      color: #E0E0E0; /* Cor do texto clara */
+      background: #121212;
+      color: #E0E0E0;
       padding: 20px;
     }
 
@@ -73,13 +42,13 @@
 
     header h1 {
       font-size: 2.5rem;
-      color: #00BFFF; /* Cor clara para o título */
+      color: #00BFFF;
       margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #B0B0B0; /* Cor do texto secundário mais suave */
+      color: #B0B0B0;
     }
 
     main {
@@ -103,7 +72,7 @@
     }
 
     ul.news-list li {
-      background: #1E1E1E; /* Fundo escuro para as notícias */
+      background: #1E1E1E;
       margin-bottom: 15px;
       padding: 15px 20px;
       border-radius: 5px;
@@ -121,13 +90,12 @@
       color: #B0B0B0;
     }
 
-    /* Estilo da propaganda central */
     #propaganda {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: #333; /* Cor de fundo mais escura para a propaganda */
+      background: #333;
       color: white;
       padding: 30px;
       border-radius: 12px;
@@ -172,6 +140,19 @@
       font-size: 1rem;
       margin-top: 20px;
     }
+
+    /* Seção de código aleatório */
+    #codigo-aleatorio {
+      margin-top: 50px;
+      text-align: center;
+      color: #E0E0E0;
+      font-size: 1.2rem;
+      background: #1E1E1E;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
   </style>
 </head>
 
@@ -209,6 +190,11 @@
     <!--------------relogio-->
     <div id="relogio"></div>
     <!--------------relogio-->
+  </div>
+
+  <!-- Código aleatório no final -->
+  <div id="codigo-aleatorio">
+    <p id="codigo">Gerando código aleatório...</p>
   </div>
 
   <!-- JavaScript para inserir notícias -->
@@ -259,5 +245,19 @@
     setInterval(atualizarRelogio, 60000);
   </script>
 
+  <!-- Função JavaScript para gerar código aleatório -->
+  <script>
+    function gerarCodigoAleatorio() {
+      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let codigo = '';
+      for (let i = 0; i < 10; i++) {
+        codigo += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+      }
+      document.getElementById('codigo').textContent = `Código aleatório: ${codigo}`;
+    }
+
+    // Gerar código aleatório ao carregar a página
+    gerarCodigoAleatorio();
+  </script>
 </body>
 </html>
